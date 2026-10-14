@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página interactiva</title>
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a3d1ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #1de5ff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #51ff01;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size:  50px;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mi primera página web</h1>
+
+    <p>Presioná el botón para mostrar un mensaje.</p>
+
+    <button onclick="mostrarMensaje()">
+        Hacer clic
+    </button>
+
+    <p id="mensaje"></p>
+
+    <!-- Código JavaScript -->
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").innerText =
+                "¡Hola! Bienvenido a mi página web.";
+        }
+    </script>
+
+</body>
+</html>
