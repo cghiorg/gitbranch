@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de saludo</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Bienvenido</h1>
+
+        <p>Ingresá tu nombre para recibir un saludo.</p>
+
+        <form action="{{ url_for('saludar') }}" method="POST">
+
+            <input type="text"
+                   name="nombre"
+                   placeholder="Escribí tu nombre"
+                   required>
+
+            <button type="submit">Saludar</button>
+
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
