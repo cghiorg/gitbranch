@@ -17,3 +17,5 @@ animales = [Perro(), Gato()]
 
 for animal in animales:
     print(animal.hablar())
+    
+print()

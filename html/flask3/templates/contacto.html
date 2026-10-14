@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Contacto
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<h2>
+    Contacto
+</h2>
+
+
+<form
+    action="{{ url_for('contacto') }}"
+    method="POST"
+>
+
+
+    <label>
+        Nombre
+    </label>
+
+    <input
+        type="text"
+        name="nombre"
+        required
+    >
+
+
+    <br><br>
+
+
+    <label>
+        Mensaje
+    </label>
+
+    <textarea
+        name="mensaje"
+        required
+    ></textarea>
+
+
+    <br><br>
+
+
+    <button type="submit">
+        Enviar
+    </button>
+
+
+</form>
+
+
+{% if mensaje_enviado %}
+
+    <p>
+        Gracias {{ nombre }}.
+        Tu mensaje fue recibido.
+    </p>
+
+{% endif %}
+
+
+{% endblock %}
